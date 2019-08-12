@@ -2,10 +2,13 @@
 <head>
 <style>
 div.ex1{
-  background-color: rgb(108, 245, 165);
+  background-color: rgb(255, 255, 255);
   width: 950px;
   height: 350px;
   overflow: scroll;
+  margin: 0 auto;
+  border : 5px solid rgb(255, 0, 242);
+  border-radius : 7px;
 }
 </style>
 </head>
@@ -13,7 +16,6 @@ div.ex1{
 <a href ="['product']">
     <h1>QuickChat</h1>
 </a>
-
 <div class="container-fluid">
     <div class="row"> 
     </div>
@@ -32,9 +34,7 @@ div.ex1{
                 <option value="GroupChat">Group Chat</option>
             </select>
             <small id="userHelp" class="form-text text-muted">Type your chat option.</small>
-        </div>
-
-        
+        </div>     
         <div class="col sm-2">
             <div style="margin-top:19px;" class="pull-right"> 
                 <button type="button" class="btn btn-primary" (click)="join()">JOIN</button>
@@ -43,7 +43,6 @@ div.ex1{
         </div>
     </div>
     <hr>
-    
     <div class="row">
         <div class="ex1">
             <div *ngFor="let item of messageArray">
