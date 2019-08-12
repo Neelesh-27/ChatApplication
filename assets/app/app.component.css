@@ -1,0 +1,23 @@
+h1{
+    color: rgb(255, 59, 34);
+}
+h3{
+    color: rgb(226, 230, 14);
+}
+label{
+     color: rgb(226, 230, 14);
+}
+option{
+    color: rgb(38, 0, 255);
+}
+small{
+    color: rgb(255, 40, 183);   
+}
+html,body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    }
+    

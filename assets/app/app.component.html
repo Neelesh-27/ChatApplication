@@ -1,0 +1,67 @@
+<html>
+<head>
+<style>
+div.ex1{
+  background-color: rgb(108, 245, 165);
+  width: 950px;
+  height: 350px;
+  overflow: scroll;
+}
+</style>
+</head>
+<body>
+<a href ="['product']">
+    <h1>QuickChat</h1>
+</a>
+
+<div class="container-fluid">
+    <div class="row"> 
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="form-group">
+                <label for="username">USERNAME</label>
+                <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="Enter username">
+                <small id="userHelp" class="form-text text-muted">Type your username.</small> 
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <label for="chatting">CHATTING MENU</label>
+            <select name="text" id="chatInput" class="form-control" [(ngModel)]="chat">
+                <option value="OnetoOne">One to One</option>
+                <option value="GroupChat">Group Chat</option>
+            </select>
+            <small id="userHelp" class="form-text text-muted">Type your chat option.</small>
+        </div>
+
+        
+        <div class="col sm-2">
+            <div style="margin-top:19px;" class="pull-right"> 
+                <button type="button" class="btn btn-primary" (click)="join()">JOIN</button>
+                <button type="button" class="btn btn-primary" (click)="leave()">LEAVE</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="row">
+        <div class="ex1">
+            <div *ngFor="let item of messageArray">
+      <span style = "color:rgb(0, 17, 167);"><strong>{{item.user}} : </strong> {{item.message}}</span>   
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="messageText" placeholder="Type your message">  
+            <small id="userHelp" class="form-text text-muted">Type your message.</small>          
+        </div>
+        <div class="col-sm-2">
+                <button type="button" class="btn btn-success pull-right" (click)="sendMessage()">SEND</button>
+        </div>  
+    </div>
+</div>
+</body>
+</html>
+
