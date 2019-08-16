@@ -49,7 +49,9 @@ io.on('connection',(socket)=>{
     socket.on('message',function(data){
 
       io.in(data.chat).emit('new message', {user:data.user, message:data.message});
+            
     })
+
 });
 
 /**

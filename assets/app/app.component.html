@@ -3,13 +3,23 @@
 <style>
 div.ex1{
   background-color: rgb(255, 255, 255);
-  width: 950px;
+  width: 925px;
   height: 350px;
   overflow: scroll;
   margin: 0 auto;
   border : 5px solid rgb(255, 0, 242);
   border-radius : 7px;
 }
+aside{
+                   float: left;
+                   width: 15%;
+                   border : 3px solid rgb(232, 248, 12);
+                   border-radius : 5px;
+                   background-color: rgb(232, 248, 12);
+            }
+h3{
+                 color: rgb(255, 59, 34);
+    }            
 </style>
 </head>
 <body>
@@ -34,7 +44,8 @@ div.ex1{
                 <option value="GroupChat">Group Chat</option>
             </select>
             <small id="userHelp" class="form-text text-muted">Type your chat option.</small>
-        </div>     
+        </div>   
+
         <div class="col sm-2">
             <div style="margin-top:19px;" class="pull-right"> 
                 <button type="button" class="btn btn-primary" (click)="join()">JOIN</button>
@@ -44,6 +55,14 @@ div.ex1{
     </div>
     <hr>
     <div class="row">
+            <aside>
+                    <div class="col-md-14">            
+                    <div class="well">
+                        <h3>Online Users</h3>
+                        <ul class="list-group" id="users">{{user}}</ul>
+                    </div>
+                    </div>
+            </aside>
         <div class="ex1">
             <div *ngFor="let item of messageArray">
       <span style = "color:rgb(0, 17, 167);"><strong>{{item.user}} : </strong> {{item.message}}</span>   
